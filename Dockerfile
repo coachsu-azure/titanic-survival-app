@@ -8,7 +8,7 @@ WORKDIR /app
 COPY app.py requirements.txt model.pkl /app/
 
 # 安裝Python套件
-RUN apt update && apt install -y build-essential python3-dev libatlas-base-dev
+RUN apt update && apt install -y build-essential python3-dev libopenblas-dev
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 暴露 Flask 端口
